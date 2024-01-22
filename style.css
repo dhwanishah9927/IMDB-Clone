@@ -1,0 +1,318 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    margin:0;
+}
+body{
+    background-image: linear-gradient(90deg,lightblue, yellow, pink);
+}
+:root{
+    --font-color: white; 
+}
+                                        /* --------navigation bar for input box------- */
+.navigationContainer{ 
+    background-color: rgb(81, 75, 75);
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.navigationContainer input::placeholder{
+    color:var(--font-color);
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+.navigationContainer input{
+    font-size: 1.2rem;
+    font-weight:bolder;
+    text-align: center;
+    display: flex;
+    padding:0.5rem;
+    background-color: rgb(110, 52, 52);
+    border: none;
+    width: 25rem;
+    border-radius: 1.8rem;
+    color:var(--font-color);
+}
+                                    /* --------navigation bar for favorite button container------- */
+.btn{
+    color: var(--font-color);
+    background-color: transparent;
+    padding: 0.9rem;
+    border: none;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+.favoriteBtnCover {
+    position: relative;
+}
+.favoriteBtnCover :hover{
+    color: pink;
+}
+.favoriteBtnCover button :hover{
+    color: pink;
+}
+#favoriteCount {
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    color: var(--font-color);
+    border-radius: 60%;
+    background-color:rgb(110, 52, 52); 
+    padding: 3px 9px;
+    top: -0.6rem;
+    right: 5px;
+}
+                                    /* --------favorite box container------- */
+#favoriteBox.active{
+    background-color: rgba(0, 0, 0, 0.686);
+    display:block;
+    position:fixed;
+    width:35%;
+    height:100%;
+    top:0%;
+    right:0%;
+    z-index: 1000;
+}
+#favoriteBox{
+    height:100%;
+    width: 50%;
+    z-index: 1000;
+    display:none;
+    background-color: transparent;
+}
+#favoriteBox >span a{
+    margin:2rem;
+    color: var(--font-color);
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+#favoriteBox >span a:hover{
+    color: rgb(0, 255, 225);
+}
+#favoriteBox ul{
+    padding:2rem;
+}
+#favoriteBox ul li{
+    color:var(--font-color);
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin:1rem;
+    cursor: pointer;
+}
+#favoriteBox ul li img{
+    height: 6rem;
+    width: 6rem;
+}
+#favoriteBox ul li:hover{
+    box-shadow: 3px 3px 7px 5px pink;
+}
+.delete-button{
+    position:relative;
+    color:var(--font-color);
+}
+                                    /* -------------movie List--------- */
+.movieList{
+    justify-content: space-evenly;
+    align-items: center;
+    padding:3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.movie-box{
+    cursor: pointer;
+    height: 10rem;
+    width:10rem;
+    border:none;
+    border-radius: 1rem;
+    outline:none;
+    margin: 5rem;
+}
+.movie-box img{
+    border-radius: 0.8rem 0.8rem 0 0;
+    width:inherit;
+    height:inherit;
+}
+.movie-box:hover{
+    transition: all 0.6s ease-in-out;
+    transform: scale(1.3);
+}
+.titleyearBtn{
+    position: relative;
+    top:-3%;
+    width:100%;
+    height: auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: rgba(9, 52, 52, 0.5);
+    color:var(--font-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:0.5rem;
+    border:double;
+    border-radius: 0 0 0.8rem 0.8rem;
+}
+                            /* -----------movie details container ----------- */
+#detailBox.active{
+    display:inline;
+    background-color: rgb(36, 95, 137);
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0%;
+    z-index: 1000;
+}
+#detailBox{
+    position:fixed;
+    display:none;
+    top:0%;
+    width:100%;
+    height:100%;
+}
+#detailBox >span a{
+    color: var(--font-color);
+    font-weight: bolder;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 2rem;
+}
+#detailBox >span a:hover{
+    color: rgb(0, 255, 225);
+}
+.movieDetails{
+    margin: 2rem;
+    padding:2rem;
+    display: flex;
+    height:500px;
+    width:1000px;
+}
+.imageContainer{
+    width:35%;
+    height:60%;
+}
+.imageContainer img{
+    width:100%;
+    height:100%;
+}
+.addToFavorite-btn {
+    background-color: blue;
+    color: var(--font-color);
+    cursor: pointer;
+    width:100%;
+    line-height: 0.3;
+    padding:1.6rem;
+    font-weight: bolder;
+    border: dotted black;
+}
+.movieinfoContainer{
+    height:auto;
+    width:70%;
+    padding: 2rem;
+}
+p{
+    font-size: 1rem;
+}
+h1,p{
+    color: var(--font-color);
+    margin-bottom: 0.8rem;
+    text-align: justify;
+}
+h1 > span{
+    margin:3rem;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+.moviedata b, .plot b {
+    color: orange;
+}
+.plot{
+    margin-top:1.5rem;
+    font-size: 1rem;
+}
+                                    /*---------- media queries----------- */
+@media screen and  (max-width:1000px)
+{
+    #favoriteBox.active{
+        width:100%;
+        height:100%;
+    }
+    .navigationContainer input::placeholder{
+        font-size: 0.8rem   ;
+    }
+    .movieDetails{
+        overflow-y: scroll;
+    }
+   .plot{
+    width:70%;
+   } 
+
+}
+@media screen and  (max-width:700px){
+    #favoriteBox.active{
+        width:100%;
+        height:100%;
+    }
+    .navigationContainer input::placeholder{
+        font-size: 0.8rem;
+    }
+    .navigationContainer input{
+        width: 10rem;
+        margin-left: 3rem;
+    }
+    .movieDetails{
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+    }
+    .movieinfoContainer p>span{
+        display: flex;
+        flex-wrap: wrap ;
+        align-items: flex-start;
+    }
+    .imageContainer{
+        margin-bottom: 3rem;
+    }
+    .movieinfoContainer p{
+        width: 60%;
+    }
+   .plot{
+    width:60%;
+   }
+}
+@media screen and  (max-width:450px){
+    #favoriteBox.active{
+        width:100%;
+        height:100%;
+    }
+    .navigationContainer input::placeholder{
+        font-size: 0.8rem;
+    }
+    .navigationContainer input{
+        width: 8rem;
+        margin-left: 3rem;
+    }
+    .movieDetails{
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+    }
+    .movieinfoContainer p{
+        width:40%;
+    }
+    .movieinfoContainer p>span{
+        display: flex;
+        flex-wrap: wrap ;
+        align-items: flex-start ;
+    }
+    .imageContainer{
+        margin-bottom: 3rem;
+    }
+   .plot{
+    width:40%;
+   }
+}

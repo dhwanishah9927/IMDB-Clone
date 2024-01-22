@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b3348ae33f.js" crossorigin="anonymous"></script>
+    <title>IMDB-CLONE</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navigationContainer">
+                <img width="100" height="85" src="imdb.png" alt="imdb-image">
+                <div class="inputboxContainer">
+                    <input type="text" id="inputBox" placeholder="SEARCH HERE..">
+                </div>
+                <div class="favoriteBtnCover">
+                    <button class="favoriteBtn btn"> <i class="fa-solid fa-heart"></i> FAVORITES LIST</button>
+                    <span id="favoriteCount">0</span>
+                </div>
+            </div>
+            <div id="favoriteBox">
+                <span><a href="#">X</a></span>
+                <ul class="favoriteboxContainer"></ul>
+            </div>            
+        </nav>       
+    </header>
+    <main>
+        <div class="movieList"></div>
+        <div id="detailBox">
+            <span><a href="#"><i class="fa-sharp fa-solid fa-arrow-left"></i>&nbsp;go back to home page</a></span>        
+            <div class="moviedetailsBox"></div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
